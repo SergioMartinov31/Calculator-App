@@ -172,3 +172,59 @@ body.dark .phone-header__icon-dark{
     }
   }
 }
+
+
+
+@media (max-width: 400px) {
+  .phone {
+    width: 320px; // уменьшаем ширину телефона
+    height: auto;
+    margin: 60px auto; // уменьшаем отступ сверху
+
+    &-screen {
+      gap: 50px;
+      height: 600px;
+      .calculation {
+        width: 280px; // уменьшаем ширину области с цифрами и результатом
+        
+
+        &__result {
+          font-size: 50px; // подгоняем размер шрифта результата
+        }
+
+        .calculation-log {
+          &__text {
+            font-size: 30px; // подгоняем шрифт истории вычислений
+          }
+        }
+
+        .keyboard {
+          gap: 12px;
+
+          &__button--number,
+          &__button--operator,
+          &__button--function {
+            width: 60px !important;
+            height: 60px !important;
+            font-size: 20px !important;
+          }
+        }
+      }
+    }
+
+    &-footer {
+      .home-indicator {
+        width: 100px; // уменьшаем домашний индикатор на телефонах
+        height: 4px;
+      }
+    }
+  }
+
+  body.dark .phone-header__icon-light {
+    display: none !important;
+  }
+
+  body.dark .phone-header__icon-dark {
+    display: block !important;
+  }
+}

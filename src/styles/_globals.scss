@@ -1,0 +1,60 @@
+@font-face {
+  font-family: "Work Sans";
+  src: url("../public/fonts/WorkSans-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Work Sans";
+  src: url("../public/fonts/WorkSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Work Sans";
+  src: url("../public/fonts/WorkSans-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+
+/* По умолчанию (светлая тема) */
+body {
+  --background: var(--light-background);
+  --background-phone: var(--light-background-phone);
+  --text: var(--light-text);
+  --button-high: var(--light-button-high-emphasis);
+  --button-medium: var(--light-button-medium-emphasis);
+  --button-low: var(--light-button-low-emphasis);
+  --general-color: var(--general-black);
+
+  font-family: var(--font-family);
+  font-size: 32px;
+  line-height: 1.25;
+  color: var(--text);
+  background-color: var(--background);
+  
+
+  transition: background-color 0.4s ease, color 0.7s ease;
+}
+
+
+/* Тёмная тема */
+body.dark {
+  --background: var(--dark-background);
+  --background-phone: var(--dark-background-phone);
+  --text: var(--dark-text);
+  --button-high: var(--dark-button-high-emphasis);
+  --button-medium: var(--dark-button-medium-emphasis);
+  --button-low: var(--dark-button-low-emphasis);
+  --general-color: var(--general-white);
+}
+
+

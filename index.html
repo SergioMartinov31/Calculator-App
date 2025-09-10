@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Calculator</title>
+  </head>
+  <body>
+    <section class="phone">
+    <header class="phone-header">
+      <div class="phone-header__time">
+        <span class="phone-header__time-text">9:41</span>
+      </div>
+      <div class="phone-header__notch"></div>
+      <ul class="phone-header__indicators">
+        <li class="phone-header__indicator phone-header__indicator--signal">
+          <img class="phone-header__icon phone-header__icon--signal phone-header__icon-light" src="./public/icons/icon-signal(light).svg" alt="signal-icon"/>
+          <img class="phone-header__icon phone-header__icon--signal phone-header__icon-dark" src="./public/icons/icon-signal(dark).svg" alt="signal-icon"/>
+        </li>
+        <li class="phone-header__indicator phone-header__indicator--wifi"> 
+          <img class="phone-header__icon phone-header__icon--wifi phone-header__icon-light" src="./public/icons/icon-wifi(light).svg" alt="wifi-icon"/>
+          <img class="phone-header__icon phone-header__icon--wifi phone-header__icon-dark" src="./public/icons/icon-wifi(dark).svg" alt="wifi-icon"/>  
+        </li>
+        <li class="phone-header__indicator phone-header__indicator--battery"> 
+          <img class="phone-header__icon phone-header__icon--battery phone-header__icon-light" src="./public/icons/icon-battery(light).svg" alt="battery-icon"/>
+          <img class="phone-header__icon phone-header__icon--battery phone-header__icon-dark" src="./public/icons/icon-battery(dark).svg" alt="battery-icon"/>
+        </li>
+      </ul>
+    </header>
+    <main class="phone-screen">
+        <button class="color-change" aria-label="toggle dark mode">
+          <img class="color-change__icon color-change__icon--sun" src="./public/icons/icon-sun.svg" alt=""/>
+          <img class="color-change__icon color-change__icon--right" src="./public/icons/icon-0(light).svg" alt=""/>
+
+          <img class="color-change__icon color-change__icon--left" src="./public/icons/icon-0(dark).svg" alt=""/>
+          <img class="color-change__icon color-change__icon--moon" src="./public/icons/icon-moon.svg" alt=""/>
+          
+        </button>
+
+        <section class="calculation">
+          <div class="calculation-log" role="log" aria-live="polite">
+            <span class="calculation-log__text">0</span>
+          </div>
+
+          <output class="calculation__result" aria-live="polite">0</output>
+
+
+         <div class="keyboard">
+            <div class="keyboard__row">
+              <button class="keyboard__button keyboard__button--function keyboard__button--ac" type="button" aria-label="Clear">AC</button>
+              <button class="keyboard__button keyboard__button--function" type="button" aria-label="Toggle sign">+/-</button>
+              <button class="keyboard__button keyboard__button--function" type="button" aria-label="Percent">%</button>
+              <button class="keyboard__button keyboard__button--operator" type="button" aria-label="Divide">÷</button>
+            </div>
+            <div class="keyboard__row">
+              <button class="keyboard__button keyboard__button--number" type="button">7</button>
+              <button class="keyboard__button keyboard__button--number" type="button">8</button>
+              <button class="keyboard__button keyboard__button--number" type="button">9</button>
+              <button class="keyboard__button keyboard__button--operator" type="button" aria-label="Multiply">×</button>
+            </div>
+            <div class="keyboard__row">
+              <button class="keyboard__button keyboard__button--number" type="button">4</button>
+              <button class="keyboard__button keyboard__button--number" type="button">5</button>
+              <button class="keyboard__button keyboard__button--number" type="button">6</button>
+              <button class="keyboard__button keyboard__button--operator" type="button" aria-label="Subtract">-</button>
+            </div>
+            <div class="keyboard__row">
+              <button class="keyboard__button keyboard__button--number" type="button">1</button>
+              <button class="keyboard__button keyboard__button--number" type="button">2</button>
+              <button class="keyboard__button keyboard__button--number" type="button">3</button>
+              <button class="keyboard__button keyboard__button--operator" type="button" aria-label="Add">+</button>
+            </div>
+            <div class="keyboard__row">
+              <button class="keyboard__button keyboard__button--number" type="button">.</button>
+              <button class="keyboard__button keyboard__button--number" type="button">0</button>
+              <button class="keyboard__button keyboard__button--function" type="button" aria-label="Backspace">⌫</button>
+              <button class="keyboard__button keyboard__button--operator" type="button" aria-label="Equals">=</button>
+            </div>
+          </div>
+
+      </section>
+    </main>
+
+    <footer class="phone-footer">
+      <div class="home-indicator"></div>
+    </footer>
+    </section>
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+.color-change {
+  width: 72px;
+  height: 32px;
+  border-radius: 16px;
+  border: 0;
+  background-color: var(--button-low);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+
+  transition: background-color 0.3s;
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    display: none;
+  }
+
+
+  &__icon--sun,
+  &__icon--right {
+    display: block;
+  }
+}
+
+
+body.dark {
+  .color-change__icon--sun,
+  .color-change__icon--right {
+    display: none;
+  }
+
+  .color-change__icon--moon,
+  .color-change__icon--left {
+    display: block;
+  }
+}

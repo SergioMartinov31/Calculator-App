@@ -40,10 +40,15 @@ body {
   line-height: 1.25;
   color: var(--text);
   background-color: var(--background);
+
+  display: flex;
+  align-items: center;   
+  justify-content: center;
   
 
   transition: background-color 0.4s ease, color 0.7s ease;
 }
+
 
 
 /* Тёмная тема */
@@ -57,4 +62,12 @@ body.dark {
   --general-color: var(--general-white);
 }
 
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; // отключает скролл
+}
 

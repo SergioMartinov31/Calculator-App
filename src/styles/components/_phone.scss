@@ -177,21 +177,23 @@ body.dark .phone-header__icon-dark{
 
 @media (max-width: 400px) {
   .phone {
-    width: 290px; // уменьшаем ширину телефона
+    width: 270px; // уменьшаем ширину телефона
     height: auto;
 
     &-screen {
       gap: 10px;
-      height: 480px;
+      height: 460px;
       .calculation {
-        width: 280px; // уменьшаем ширину области с цифрами и результатом
+        width: 100%; // уменьшаем ширину области с цифрами и результатом
         gap: 10px;
 
         &__result {
+          margin-right: 10px;
           font-size: 80px !important; // подгоняем размер шрифта результата
         }
 
         .calculation-log {
+          margin-right: 10px;
           &__text {
             font-size: 40px; // подгоняем шрифт истории вычислений
           }
@@ -200,13 +202,19 @@ body.dark .phone-header__icon-dark{
         .keyboard {
           gap: 8px;
 
+          &__row{
+            gap: 20px;
+          }
+
           &__button--number,
           &__button--operator,
           &__button--function {
-            width: 50px !important;
-            height: 50px !important;
+            width: 45px !important;
+            height: 45px !important;
             font-size: 20px !important;
           }
+
+          
         }
       }
     }

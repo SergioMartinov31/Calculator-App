@@ -52,6 +52,7 @@ document.querySelector('.keyboard').onclick = (event) => {
 
   if (btn.classList.contains('keyboard__button--number')){
     let key = btn.textContent
+	
 	if (key === '.' && a.includes('.') && sign === "") return;
 	if (key === '.' && b.includes('.') && sign !== "") return;
 
@@ -64,11 +65,13 @@ document.querySelector('.keyboard').onclick = (event) => {
 			
 		} else if (b === "" && sign === "") {
 			if (a === '0' && key === '0') return; 
+			if (a === '' && key === '.') return;
     		if (a === '0' && key !== '.') a = key;
 			else if (a.length < 5) a += key;
 		} else {
-			if (a === '0' && key === '0') return; 
-    		if (a === '0' && key !== '.') a = key;
+			if (b === '0' && key === '0') return; 
+			if (b === '' && key === '.') return;
+			if (b === '0' && key !== '.') b = key;
 			else if (b.length < 5) b += key;
 		}
 		out.textContent = sign === "" ? a : b;
@@ -96,20 +99,22 @@ document.querySelector('.keyboard').onclick = (event) => {
 
   if (btn.textContent === "+/-"){
 	if (b === "" && sign === ""){
-        a = (-1) * a;
-        out.textContent = formatResult(a);
+        a = String((-1) * a);
+        out.textContent = a;
+		log.textContent = `${a} ${sign} ${b}`
+		
 		
       }
       else if(a !== "" && b !== "" && finish) {
-		a = (-1) * a;
-		out.textContent = formatResult(a);
+		a = String((-1) * a);
+		out.textContent = a;
       }
       else{
-        b  = (-1) * b;
-        out.textContent = formatResult(b);
+        b  = String((-1) * b);
+        out.textContent = b;
       }
-
-	  log.textContent = `${formatResult(a)} ${sign} ${formatResult(b)}`
+	
+	  log.textContent = `${a} ${sign} ${b}`
 
       return;
   }
@@ -138,7 +143,22 @@ document.querySelector('.keyboard').onclick = (event) => {
 	}
 
 
-
+	if (btn.textContent === '%') {
+		if (sign === "") {
+			if (a !== "") {
+				a = String(formatResult(+a / 100));
+				out.textContent = a;
+				log.textContent = a;
+			}
+		} else {
+			if (a !== "" && b !== "") {
+				b = String(formatResult((+a * +b) / 100));
+				out.textContent = b;
+				log.textContent = `${a} ${sign} ${b}`;
+			}
+		}
+		return;
+	}
 
   if (btn.textContent === '='){
 	if (b === "") b = a;

@@ -91,6 +91,8 @@ body.dark .phone-header__icon-dark{
     align-items: center;
     gap: 55px;
 
+    transition: background-color 0.9s, transform 0.3s;
+
 
 
     .calculation{
@@ -175,12 +177,23 @@ body.dark .phone-header__icon-dark{
 
 
 
-@media (max-width: 400px) {
+@media (max-width: 400px), (max-height: 820px) {
   .phone {
-    width: 270px; // уменьшаем ширину телефона
+    width: 280px; // уменьшаем ширину телефона
     height: auto;
     
 
+    &-header__notch{
+      width: 110px;
+    }
+
+    &-header__indicators{
+      gap: 4px;
+      margin-right: 7px;
+
+  
+    }
+     
     &-screen {
       gap: 20px;
       height: 460px;
@@ -243,4 +256,51 @@ body.dark .phone-header__icon-dark{
   body.dark .phone-header__icon-dark {
     display: block !important;
   }
+}
+
+
+
+
+@media (min-width: 901px) and (max-width: 1024px) and (max-height: 820px){
+  .phone {
+    width: 310px;
+    height: 650px; // фиксированная высота для планшетов
+  }
+
+  .phone-screen {
+    height: 550px; // уменьшаем экран телефона
+    gap: 20px;
+
+    .calculation {
+      height: auto;
+      gap: 12px;
+
+      &__result {
+        font-size: 65px !important; // чуть меньше, чем на десктопе
+        margin-right: 16px;
+      }
+
+      .calculation-log__text {
+        font-size: 28px; // тоже поджали
+        margin-right: 25px;
+      }
+
+      .keyboard {
+        gap: 10px;
+
+        &__button--number,
+        &__button--operator,
+        &__button--function {
+          width: 55px !important;
+          height: 55px !important;
+          font-size: 24px !important;
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-width: 1024px) and (min-height: 821px){
+
 }

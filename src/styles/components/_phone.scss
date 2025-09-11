@@ -181,11 +181,11 @@ body.dark .phone-header__icon-dark{
     height: auto;
 
     &-screen {
-      gap: 30px;
-      height: 590px;
+      gap: 0px;
+      height: 520px;
       .calculation {
         width: 280px; // уменьшаем ширину области с цифрами и результатом
-        
+        gap: 10px;
 
         &__result {
           font-size: 20px; // подгоняем размер шрифта результата

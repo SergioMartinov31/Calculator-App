@@ -97,19 +97,19 @@ document.querySelector('.keyboard').onclick = (event) => {
   if (btn.textContent === "+/-"){
 	if (b === "" && sign === ""){
         a = (-1) * a;
-        out.textContent = a;
+        out.textContent = formatResult(a);
 		
       }
       else if(a !== "" && b !== "" && finish) {
 		a = (-1) * a;
-		out.textContent = a;
+		out.textContent = formatResult(a);
       }
       else{
         b  = (-1) * b;
-        out.textContent = b;
+        out.textContent = formatResult(b);
       }
 
-	  log.textContent = `${a} ${sign} ${b}`
+	  log.textContent = `${formatResult(a)} ${sign} ${formatResult(b)}`
 
       return;
   }

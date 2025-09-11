@@ -117,7 +117,7 @@ body.dark .phone-header__icon-dark{
       .calculation__result{
         font-family: var(--font-family);
         font-weight: 300;
-        font-size: 96px;
+        font-size: 85px;
         line-height: 100%;
         text-align: right;
         color: var(--text);
@@ -192,7 +192,7 @@ body.dark .phone-header__icon-dark{
 
         &__result {
           margin-right: 10px;
-          font-size: 60px !important; // подгоняем размер шрифта результата
+          font-size: 50px !important; // подгоняем размер шрифта результата
         }
 
         .calculation-log {
@@ -212,9 +212,11 @@ body.dark .phone-header__icon-dark{
           &__button--number,
           &__button--operator,
           &__button--function {
-            width: 45px !important;
-            height: 45px !important;
+
+            width: 47px !important;
+            height: 47px !important;
             font-size: 20px !important;
+            border-radius: 18px !important; 
 
             touch-action: manipulation;   /* отключает double-tap zoom */
             -webkit-user-select: none;    /* запрет выделения текста */

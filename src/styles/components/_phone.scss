@@ -179,17 +179,16 @@ body.dark .phone-header__icon-dark{
   .phone {
     width: 320px; // уменьшаем ширину телефона
     height: auto;
-    margin: 60px auto; // уменьшаем отступ сверху
 
     &-screen {
-      gap: 50px;
-      height: 600px;
+      gap: 30px;
+      height: 590px;
       .calculation {
         width: 280px; // уменьшаем ширину области с цифрами и результатом
         
 
         &__result {
-          font-size: 50px; // подгоняем размер шрифта результата
+          font-size: 20px; // подгоняем размер шрифта результата
         }
 
         .calculation-log {
@@ -199,7 +198,7 @@ body.dark .phone-header__icon-dark{
         }
 
         .keyboard {
-          gap: 12px;
+          gap: 8px;
 
           &__button--number,
           &__button--operator,
